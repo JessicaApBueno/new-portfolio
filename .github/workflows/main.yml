@@ -3,7 +3,7 @@ name: Deploy Portfolio to Cloud Run
 on:
   push:
     branches:
-      - main
+      - main  # Certifique-se de que sua branch se chama main
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
 
   deploy:
     name: 🚀 Deploy to Cloud Run
-    needs: build # Só roda se o job de build terminar com sucesso
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
@@ -55,4 +55,5 @@ jobs:
             --image us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/portfolio-image:${{ github.sha }} \
             --region us-central1 \
             --platform managed \
+            --port 8080 \
             --allow-unauthenticated
