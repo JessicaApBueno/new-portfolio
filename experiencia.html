@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vah MaNa | Sobre</title>
+<link rel="icon" type="image/png" href="./assets/Vah-MaNa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="matrix-canvas"></canvas>
+<div class="scan-overlay"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="./index.html" class="nav-logo-wrap">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo">
+    <div>
+      <span class="nav-brand">Vah MaNa</span>
+      <span class="nav-tagline">O elo entre o legado e a inovação.</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="./index.html">Manifesto</a></li>
+      <li><a href="./sobre.html" class="active">Sobre</a></li>
+      <li><a href="./experiencia.html">Experiência</a></li>
+      <li><a href="./projetos.html">Projetos</a></li>
+      <li><a href="./formacao.html">Formação</a></li>
+    </ul>
+    <a href="./contato.html" class="nav-cta">Entre em Contato →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="./index.html"       onclick="closeMenu()">Manifesto</a>
+  <a href="./sobre.html"       onclick="closeMenu()">Sobre</a>
+  <a href="./experiencia.html" onclick="closeMenu()">Experiência</a>
+  <a href="./projetos.html"    onclick="closeMenu()">Projetos</a>
+  <a href="./formacao.html"    onclick="closeMenu()">Formação</a>
+  <a href="./contato.html" class="mobile-cta" onclick="closeMenu()">Contratar →</a>
+</div>
+
+<div class="section-wrap" id="experiencia">
+  <p class="section-label">// 03 · Histórico Profissional</p>
+  <h2 class="section-title">Experiência</h2>
+  <p class="section-subtitle">Trajetória construída com foco crescente em cloud, automação e operações.</p>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <p class="tl-period">Julho 2025 — Presente · Cotia, SP</p>
+        <p class="tl-title">Estagiária em Customer Success</p>
+        <p class="tl-company">Qi Network · Google Cloud Premier Partner</p>
+        <ul class="tl-bullets">
+          <li>Suporte especializado no Google Workspace — gestão de identidades, domínios e políticas de segurança em larga escala.</li>
+          <li>Automação de processos internos e fluxos de clientes com Google Apps Script.</li>
+          <li>Implementações com foco em segurança de dados e conformidade LGPD.</li>
+          <li>Avaliação técnica de ambientes para propor melhorias em arquiteturas de colaboração e produtividade.</li>
+          <li>Colaboração com times técnicos para resolução de incidentes complexos de infraestrutura em nuvem.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:var(--indigo); box-shadow:0 0 12px rgba(139,92,246,0.4)"></div>
+      <div class="tl-content">
+        <p class="tl-period">Maio 2024 — Abril 2025</p>
+        <p class="tl-title">Atendente de SAC e Vendas</p>
+        <p class="tl-company">Grupo BHEver</p>
+        <ul class="tl-bullets"><li>Atendimento multicanal (Zendesk, e-mail, WhatsApp) com foco em retenção e experiência do cliente.</li></ul>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="border-color:var(--blue); box-shadow:0 0 12px rgba(42,82,190,0.4)"></div>
+      <div class="tl-content">
+        <p class="tl-period">Setembro 2021 — Maio 2023</p>
+        <p class="tl-title">Assistente Administrativo</p>
+        <p class="tl-company">PagSeguro PagBank</p>
+        <ul class="tl-bullets"><li>Atendimento a grandes contas (B2C e B2B) via Salesforce, Blip e Genesys Cloud.</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-bottom:0.5rem;">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo" style="width:50px; height:auto;">
+    <span>Vah MaNa</span>
+  </div>
+  <p>O elo entre o legado e a inovação &hearts; Jessica Bueno </p>
+   <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

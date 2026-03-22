@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vah MaNa | Sobre</title>
+<link rel="icon" type="image/png" href="./assets/Vah-MaNa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="matrix-canvas"></canvas>
+<div class="scan-overlay"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="./index.html" class="nav-logo-wrap">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo">
+    <div>
+      <span class="nav-brand">Vah MaNa</span>
+      <span class="nav-tagline">O elo entre o legado e a inovação.</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="./index.html">Manifesto</a></li>
+      <li><a href="./sobre.html" class="active">Sobre</a></li>
+      <li><a href="./experiencia.html">Experiência</a></li>
+      <li><a href="./projetos.html">Projetos</a></li>
+      <li><a href="./formacao.html">Formação</a></li>
+    </ul>
+    <a href="./contato.html" class="nav-cta">Entre em Contato →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="./index.html"       onclick="closeMenu()">Manifesto</a>
+  <a href="./sobre.html"       onclick="closeMenu()">Sobre</a>
+  <a href="./experiencia.html" onclick="closeMenu()">Experiência</a>
+  <a href="./projetos.html"    onclick="closeMenu()">Projetos</a>
+  <a href="./formacao.html"    onclick="closeMenu()">Formação</a>
+  <a href="./contato.html" class="mobile-cta" onclick="closeMenu()">Contratar →</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="hero-right">
+  <div class="hero-logo-wrap">
+    <div class="hero-logo-ring"></div>
+    <div class="hero-logo-ring2"></div>
+    <div class="hero-logo-ring3"></div>
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="hero-logo">
+  </div>
+  <div class="hero-content animate-fade">
+    <h1 class="hero-name">Vah MaNa</h1>
+
+    <div class="hero-description">
+      <p>
+        O nome <strong>Vah MaNa</strong> nasceu de um legado que carrego comigo.
+        É uma homenagem às três mulheres que definem a minha trajetória: minha mãe <strong>Vanusa</strong>,
+        minha avó <strong>Maria Terezinha</strong> e minha filha <strong>Natasha</strong>.
+      </p>
+      <p>
+        Três gerações que representam o meu passado, o meu presente e o futuro que estou construindo
+        dia após dia no universo da tecnologia.
+      </p>
+
+      <ul class="legacy-list">
+        <li>
+          <strong>Resiliência</strong>
+          Sou inspirada pela força de quem veio antes de mim e pavimentou o caminho com coragem.
+        </li>
+        <li>
+          <strong>Aprendizado Contínuo</strong>
+          Sou impulsionada pela vontade de crescer e ser um exemplo de dedicação para quem vem depois.
+        </li>
+        <li>
+          <strong>Inovação com Propósito</strong>
+          Cada pipeline que construo carrega a responsabilidade de honrar esse nome e essa história.
+        </li>
+      </ul>
+
+      <p class="final-pitch">
+        Para mim, <strong>Cloud </strong> é o meio, enquanto <strong>DevOps e SRE</strong> são os pilares
+        que sustentam meu trabalho. Mas minha verdadeira missão é a <span>estabilidade</span> — tanto dos sistemas
+        que gerencio quanto dos laços que atravessam gerações.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:0.5rem;">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo" style="width:50px;height:auto;">
+    <span>Vah MaNa</span>
+  </div>
+  <p>O elo entre o legado e a inovação ♥ Jessica Bueno</p>
+  <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

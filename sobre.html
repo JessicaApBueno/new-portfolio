@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vah MaNa | Sobre</title>
+<link rel="icon" type="image/png" href="./assets/Vah-MaNa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="matrix-canvas"></canvas>
+<div class="scan-overlay"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="./index.html" class="nav-logo-wrap">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo">
+    <div>
+      <span class="nav-brand">Vah MaNa</span>
+      <span class="nav-tagline">O elo entre o legado e a inovação.</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="./index.html">Manifesto</a></li>
+      <li><a href="./sobre.html" class="active">Sobre</a></li>
+      <li><a href="./experiencia.html">Experiência</a></li>
+      <li><a href="./projetos.html">Projetos</a></li>
+      <li><a href="./formacao.html">Formação</a></li>
+    </ul>
+    <a href="./contato.html" class="nav-cta">Entre em Contato →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="./index.html"       onclick="closeMenu()">Manifesto</a>
+  <a href="./sobre.html"       onclick="closeMenu()">Sobre</a>
+  <a href="./experiencia.html" onclick="closeMenu()">Experiência</a>
+  <a href="./projetos.html"    onclick="closeMenu()">Projetos</a>
+  <a href="./formacao.html"    onclick="closeMenu()">Formação</a>
+  <a href="./contato.html" class="mobile-cta" onclick="closeMenu()">Contratar →</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-logo-wrap">
+    <div class="hero-logo-ring"></div>
+    <div class="hero-logo-ring2"></div>
+    <div class="hero-logo-ring3"></div>
+    <img src="./assets/unnamed.png" alt="VanTeNah" class="hero-logo">
+  </div>
+  <h1 class="hero-name">Jessica Bueno</h1>
+  <br><br>
+  <p class="hero-pitch">
+    Profissional de <strong>Cloud &amp; DevOps</strong> aprendendo automação de infraestrutura, pipelines CI/CD e cultura DevOps.<br>
+    Certificada <strong>Google Cloud ACE</strong> e <strong>AWS Cloud Practitioner</strong><br><br>
+    Disponível para oportunidades em Cloud Engineering, DevOps, SRE e Suporte Google Workspace.
+  </p>
+  <div class="hero-value-props">
+    <span style="text-align:center;" class="value-prop">
+      <span class="dot"></span>
+      <img src="https://images.credly.com/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png" height="100px"><br>
+      GCP Associate Cloud Engineer
+    </span>
+    <span style="text-align:center;" class="value-prop">
+      <span class="dot"></span>
+      <img src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" height="100px"><br>
+      AWS Cloud Practitioner
+    </span>
+  </div>
+</section>
+
+<div class="scan-line"></div>
+
+<!-- SOBRE / PROPOSTA DE VALOR -->
+<div class="section-wrap" id="sobre">
+  <p class="section-label">// 01 · Proposta de Valor</p><br>
+  <blockquote class="section-subtitle">
+    "Em Vah MaNa, transformo o legado de minha mãe e de minha avó em uma missão, guiada pelo futuro que desejo para minha filha: levar confiabilidade, automação e aprendizado contínuo para cada projeto em que atuo.<br>A Vah MaNa é o reflexo dessa base sólida: a força da Vanusa, a sabedoria da Maria Terezinha e o futuro da Natasha."
+    <footer>— <cite>Jessica Aparecida Bueno</cite></footer>
+  </blockquote>
+
+  <div class="value-grid">
+    <div class="value-card"><span class="value-icon">☁️</span><p class="value-card-title">Cloud Engineering</p><p class="value-card-desc">Provisionamento e gestão de infraestrutura em AWS e Google Cloud com Terraform. Ambientes escaláveis, seguros e com custo otimizado.</p></div>
+    <div class="value-card"><span class="value-icon">⚙️</span><p class="value-card-title">CI/CD &amp; Automação</p><p class="value-card-desc">Pipelines robustos com GitHub Actions, Argo Workflows e GitOps. De commit ao deploy com qualidade e rastreabilidade total.</p></div>
+    <div class="value-card"><span class="value-icon">🛡️</span><p class="value-card-title">DevSecOps</p><p class="value-card-desc">Segurança integrada ao pipeline — lint, tfsec, criptografia AES256 e controle de acesso automáticos antes de qualquer deploy.</p></div>
+    <div class="value-card"><span class="value-icon">📊</span><p class="value-card-title">Observabilidade &amp; SRE</p><p class="value-card-desc">Monitoramento com Cloud Monitoring, CloudWatch e CloudTrail. Alertas proativos e logs estruturados para garantir confiabilidade.</p></div>
+    <div class="value-card"><span class="value-icon">🐳</span><p class="value-card-title">Containers &amp; Kubernetes</p><p class="value-card-desc">Builds seguros, orquestração com Kubernetes e GitOps com ArgoCD. Workloads containerizados prontos para produção.</p></div>
+    <div class="value-card">
+      <span class="value-icon"><img src="https://www.tradiewebguys.com.au/wp-content/uploads/2024/08/Google-Workspace.webp" height="40px"></span>
+      <p class="value-card-title">Google Workspace</p>
+      <p class="value-card-desc">Suporte avançado, automação com Apps Script, gestão de identidades e conformidade LGPD no ecossistema Google.</p>
+    </div>
+  </div>
+</div>
+
+<div class="scan-line"></div>
+
+<!-- SKILLS -->
+<div class="section-wrap" id="skills">
+  <p class="section-label">// 02 · Stack Técnico</p>
+  <h2 class="section-title">Tecnologias &amp; Ferramentas</h2>
+  <p class="section-subtitle">Stack de estudos</p>
+
+  <p class="skills-section-title" style="color:#00F2FF;">☁️ Cloud Platforms</p>
+  <div class="skills-grid">
+    <span style="text-align:center;" class="skill-chip"><img src="https://img.icons8.com/?size=100&id=WHRLQdbEXQ16&format=png&color=000000"><br>Google Cloud</span>
+    <span style="text-align:center;" class="skill-chip"><img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000"><br>AWS</span>
+    <span style="text-align:center;" class="skill-chip"><img src="https://content.app-sources.com/s/5749060966154251/uploads/Google_Workspace/Admin_Product_Icon_512dp-3653732.png?format=webp" height="100px"><br>Google Workspace<br>Admin Console</span>
+  </div>
+
+  <p class="skills-section-title" style="color:#a78bfa;margin-top:2rem;">⚙️ DevOps · IaC · Containers</p>
+  <div class="skills-grid">
+    <span style="text-align:center;" class="skill-chip purple"><img src="https://img.icons8.com/?size=100&id=kEkT1u7zTDk5&format=png&color=000000"><br>Terraform</span>
+    <span style="text-align:center;" class="skill-chip purple"><img src="https://img.icons8.com/?size=100&id=iGCCE2iEmh2u&format=png&color=000000"><br>Ansible</span>
+    <span style="text-align:center;" class="skill-chip purple"><img src="https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000"><br>Docker</span>
+    <span style="text-align:center;" class="skill-chip purple"><img src="https://img.icons8.com/?size=100&id=cvzmaEA4kC0o&format=png&color=000000"><br>Kubernetes</span>
+    <span style="text-align:center;" class="skill-chip purple"><img src="https://github.com/user-attachments/assets/898e2124-c7ca-42f3-9b75-eaf6bcbc7bd8" height="100px"><br>GitHub Actions</span>
+    <span style="text-align:center;" class="skill-chip purple"><img src="https://github.com/user-attachments/assets/dd87ec77-5b3f-4669-a9d4-edf713cd84fe" height="100px"><br>ArgoCD</span>
+  </div>
+
+  <p class="skills-section-title" style="color:#A4B8BF;">💻 Linguagens &amp; Outros</p>
+  <div class="skills-grid">
+    <span style="text-align:center;" class="skill-chip white"><img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000"><br>Python</span>
+    <span style="text-align:center;" class="skill-chip white"><img src="https://img.icons8.com/?size=100&id=TMZAZMLFozcL&format=png&color=000000"><br>Bash / Shell</span>
+    <span style="text-align:center;" class="skill-chip white"><img src="https://img.icons8.com/?size=100&id=BejoiOeRfYSo&format=png&color=000000"><br>DevOps Culture</span>
+    <span style="text-align:center;" class="skill-chip white"><img src="https://miro.medium.com/1*4wT_-4X1NNLjtVLoTt1KXA.jpeg" height="100px"><br>SRE Practices</span>
+    <span style="text-align:center;" class="skill-chip white"><img src="https://img.icons8.com/?size=100&id=cq9EUYDcJKlo&format=png&color=000000"><br>Metodologias Ágeis</span>
+  </div>
+</div>
+
+<div class="scan-line"></div>
+
+<footer>
+  <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-bottom:0.5rem;">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo" style="width:50px;height:auto;">
+    <span>Vah MaNa</span>
+  </div>
+  <p>O elo entre o legado e a inovação ♥ Jessica Bueno</p>
+  <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
