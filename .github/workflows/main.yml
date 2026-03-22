@@ -3,25 +3,23 @@ name: Deploy Portfolio to Cloud Run
 on:
   push:
     branches:
-      - main  # Certifique-se de que sua branch principal no GitHub se chama 'main'
+      - main
 
 jobs:
-  deploy:
+  build:
+    name: 🏗️ Build and Push
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
-      id-token: 'write' # Obrigatório para o Workload Identity Federation
+      id-token: 'write'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Authenticate to Google Cloud
-        id: auth
         uses: google-github-actions/auth@v2
         with:
-          token_format: 'access_token'
-         
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_PROVIDER }}
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
@@ -33,10 +31,23 @@ jobs:
 
       - name: Build and Push Container
         run: |
-          # Build da imagem usando o ID do projeto e o SHA do commit para versionamento
           docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/portfolio-image:${{ github.sha }} .
-          # Push para o Artifact Registry do GCP
           docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/portfolio-image:${{ github.sha }}
+
+  deploy:
+    name: 🚀 Deploy to Cloud Run
+    needs: build # Só roda se o job de build terminar com sucesso
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
       - name: Deploy to Cloud Run
         run: |
