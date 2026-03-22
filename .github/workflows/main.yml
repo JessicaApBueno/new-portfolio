@@ -3,14 +3,14 @@ name: Deploy Portfolio to Cloud Run
 on:
   push:
     branches:
-      - main  # Verifique a branch principal se chama main ou master
+      - main  # Certifique-se de que sua branch principal no GitHub se chama 'main'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
-      id-token: 'write' # Necessário para o Workload Identity
+      id-token: 'write' # Obrigatório para o Workload Identity Federation
 
     steps:
       - name: Checkout code
@@ -21,8 +21,9 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           token_format: 'access_token'
-          workload_identity_provider: ${{ vars.GCP_WORKLOAD_PROVIDER }}
-          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+         
+          workload_identity_provider: ${{ secrets.GCP_WORKLOAD_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
@@ -32,7 +33,9 @@ jobs:
 
       - name: Build and Push Container
         run: |
+          # Build da imagem usando o ID do projeto e o SHA do commit para versionamento
           docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/portfolio-image:${{ github.sha }} .
+          # Push para o Artifact Registry do GCP
           docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/portfolio-repo/portfolio-image:${{ github.sha }}
 
       - name: Deploy to Cloud Run
