@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos Publicados · Vah MaNa</title>
+<link rel="icon" type="image/png" href="./assets/Vah-MaNa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="matrix-canvas"></canvas>
+<div class="scan-overlay"></div>
+
+
+<!-- NAV -->
+<nav>
+  <a href="./index.html" class="nav-logo-wrap">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo">
+    <div>
+      <span class="nav-brand">Vah MaNa</span>
+      <span class="nav-tagline">O elo entre o legado e a inovação.</span>
+    </div>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="./index.html">Manifesto</a></li>
+      <li><a href="./sobre.html">Sobre</a></li>
+      <li><a href="./experiencia.html">Experiência</a></li>
+      <li><a href="./projetos.html">Projetos</a></li>
+      <li><a href="./artigos.html" class="active">Artigos</a></li>
+      <li><a href="./formacao.html">Formação</a></li>
+    </ul>
+    <a href="./contato.html" class="nav-cta">Entre em Contato →</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="./index.html"       onclick="closeMenu()">Manifesto</a>
+  <a href="./sobre.html"       onclick="closeMenu()">Sobre</a>
+  <a href="./experiencia.html" onclick="closeMenu()">Experiência</a>
+  <a href="./projetos.html"    onclick="closeMenu()">Projetos</a>
+  <a href="./artigos.html"     onclick="closeMenu()">Artigos</a>
+  <a href="./formacao.html"    onclick="closeMenu()">Formação</a>
+  <a href="./contato.html" class="mobile-cta" onclick="closeMenu()">Entre em Contato →</a>
+</div>
+
+<div class="section-wrap" id="artigos">
+  <p class="section-label">// 05 · Produção Técnica</p>
+  <h2 class="section-title">Artigos Publicados</h2>
+  <p class="section-subtitle">Conteúdos práticos e autorais sobre FinOps, DevSecOps, Cloud e Infraestrutura como Código</p><br><br>
+  
+  <div class="projects-grid">
+
+    <!-- ARTIGO 1: DevSecOps com Terraform e LocalStack -->
+    <div class="project-card">
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=gU6bwZNC5TXf&format=png&color=000000" height="50px" alt="Medium"></span>
+      <p class="project-category">DevSecOps · Cloud Security · LocalStack</p>
+      <p class="project-name">Descomplicando a Nuvem: Laboratório Prático de DevSecOps com Terraform e LocalStack</p>
+      <p class="project-desc">Laboratório passo a passo focado na integração de segurança no ciclo de vida de IaC. Demonstra a criação de uma esteira automatizada no GitHub Actions com validação de sintaxe, formatação e análise estática de vulnerabilidades com tfsec antes do provisionamento em ambiente simulado.</p>
+      <div class="project-tags">
+        <span class="project-tag">DevSecOps</span>
+        <span class="project-tag">Terraform</span>
+        <span class="project-tag">LocalStack</span>
+        <span class="project-tag">tfsec</span>
+        <span class="project-tag">CI/CD</span>
+      </div>
+      <p class="project-highlight"><span>Destaque:</span> Shift-Left Security aplicado na prática com custo zero de infraestrutura.</p>
+      <a href="https://medium.com/@buenojessicaaparecida/descomplicando-a-nuvem-laborat%C3%B3rio-pr%C3%A1tico-de-devsecops-com-terraform-e-localstack-d726d99bccbd" target="_blank" rel="noopener noreferrer" class="project-link">Ler artigo no Medium →</a>
+    </div>
+
+    <!-- ARTIGO 2: Terraform Variables -->
+    <div class="project-card">
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=gU6bwZNC5TXf&format=png&color=000000" height="50px" alt="Medium"></span>
+      <p class="project-category">Infraestrutura como Código · Terraform</p>
+      <p class="project-name">Terraform Variables: Flexibilidade e Segurança no Provisionamento de Infraestrutura</p>
+      <p class="project-desc">Guia sobre a eliminação de hardcoding em infraestruturas gerenciadas por código. Explora variáveis de entrada, valores padrão, tipos complexos, variáveis de ambiente e modularização para garantir código limpo, auditável e altamente reaproveitável entre ambientes.</p>
+      <div class="project-tags">
+        <span class="project-tag">Terraform</span>
+        <span class="project-tag">IaC</span>
+        <span class="project-tag">Boas Práticas</span>
+        <span class="project-tag">Segurança</span>
+      </div>
+      <p class="project-highlight"><span>Destaque:</span> Modularização eficiente e desacoplamento de configurações sensíveis.</p>
+      <a href="https://medium.com/@buenojessicaaparecida/terraform-variables-flexibilidade-e-seguran%C3%A7a-no-provisionamento-de-infraestrutura-d4f6de690c1c" target="_blank" rel="noopener noreferrer" class="project-link">Ler artigo no Medium →</a>
+    </div>
+
+    <!-- ARTIGO 3: AWS Builder (Inglês) -->
+    <div class="project-card" style="border-color: rgba(139,92,246,0.4); box-shadow: 0 0 15px rgba(139,92,246,0.08);">
+      <span class="project-emoji"><img src="./assets/comunitybuilders.png" height="50px" alt="AWS Community Builders"></span>
+      <p class="project-category">FinOps · GreenOps · AWS Community</p>
+      <p class="project-name">FinOps Hands-On: AWS Costs + CO₂e in Every PR with Infracost &amp; Terraform</p>
+      <p class="project-desc">Publicação internacional na comunidade AWS Builder demonstrando a cultura Shift-Left FinOps. Mostra como calcular automaticamente impactos orçamentários e pegada de carbono (CO₂e) a cada Pull Request no GitHub Actions utilizando Infracost e autenticação sem chaves via AWS OIDC.</p>
+      <div class="project-tags">
+        <span class="project-tag">AWS Builder</span>
+        <span class="project-tag">FinOps</span>
+        <span class="project-tag">Infracost</span>
+        <span class="project-tag">CO₂e</span>
+        <span class="project-tag">AWS OIDC</span>
+      </div>
+      <p class="project-highlight"><span>Destaque:</span> Governança financeira e sustentabilidade proativas no fluxo de engenharia.</p>
+      <a href="https://builder.aws.com/content/3DAuhh6eFZCKwL3PWZTts7pOn7D/finops-hands-on-aws-costs-co2e-in-every-pr-with-infracost-and-terraform" target="_blank" rel="noopener noreferrer" class="project-link" style="color:#a78bfa;">Ler artigo no AWS Builder →</a>
+    </div>
+
+    <!-- ARTIGO 4: FinOps Versão em Português -->
+    <div class="project-card">
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=gU6bwZNC5TXf&format=png&color=000000" height="50px" alt="Medium"></span>
+      <p class="project-category">FinOps · Sustentabilidade · Versão em Português</p>
+      <p class="project-name">FinOps Hands-On: Custos AWS + CO₂e em Todo PR com Infracost &amp; Terraform</p>
+      <p class="project-desc">Versão em português do artigo sobre implementação prática de FinOps no GitHub Actions. Detalha a configuração do pipeline, integração do Infracost com o repositório e estratégias para empoderar os times de desenvolvimento com visibilidade de custos e emissões antes do merge.</p>
+      <div class="project-tags">
+        <span class="project-tag">FinOps PT-BR</span>
+        <span class="project-tag">Infracost</span>
+        <span class="project-tag">Sustentabilidade</span>
+        <span class="project-tag">GitHub Actions</span>
+      </div>
+      <p class="project-highlight"><span>Destaque:</span> Tomada de decisão financeira consciente antecipada direto no pull request.</p>
+      <a href="https://medium.com/@buenojessicaaparecida/finops-hands-on-custos-aws-co%E2%82%82e-em-todo-pr-com-infracost-terraform-760583674ecf" target="_blank" rel="noopener noreferrer" class="project-link">Ler artigo no Medium →</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:2.5rem;">
+    <a href="https://medium.com/@buenojessicaaparecida" target="_blank" rel="noopener noreferrer" class="btn-outline">Ver meu perfil no Medium →</a>
+  </div>
+</div>
+
+<div class="scan-line"></div>
+
+<footer>
+  <div style="display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-bottom:0.5rem;">
+    <img src="./assets/Vah-MaNa.png" alt="Vah MaNa" class="img-logo" style="width:50px; height:auto;">
+    <span>Vah MaNa</span>
+  </div>
+  <p>O elo entre o legado e a inovação &hearts; Jessica Bueno </p>
+  <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

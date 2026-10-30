@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vah MaNa</title>
+<title>Projetos · Vah MaNa</title>
 <link rel="icon" type="image/png" href="./assets/Vah-MaNa.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -26,9 +26,10 @@
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="./index.html">Manifesto</a></li>
-      <li><a href="./sobre.html" class="active">Sobre</a></li>
+      <li><a href="./sobre.html">Sobre</a></li>
       <li><a href="./experiencia.html">Experiência</a></li>
-      <li><a href="./projetos.html">Projetos</a></li>
+      <li><a href="./projetos.html" class="active">Projetos</a></li>
+      <li><a href="./artigos.html">Artigos</a></li>
       <li><a href="./formacao.html">Formação</a></li>
     </ul>
     <a href="./contato.html" class="nav-cta">Entre em Contato →</a>
@@ -43,21 +44,41 @@
   <a href="./sobre.html"       onclick="closeMenu()">Sobre</a>
   <a href="./experiencia.html" onclick="closeMenu()">Experiência</a>
   <a href="./projetos.html"    onclick="closeMenu()">Projetos</a>
+  <a href="./artigos.html"     onclick="closeMenu()">Artigos</a>
   <a href="./formacao.html"    onclick="closeMenu()">Formação</a>
   <a href="./contato.html" class="mobile-cta" onclick="closeMenu()">Entre em Contato →</a>
 </div>
+
 <div class="section-wrap" id="projetos">
   <p class="section-label">// 04 · Portfólio Técnico</p>
   <h2 class="section-title">Projetos em Destaque</h2>
-  <p class="section-subtitle"></p>Meus laboratórios práticos publicados no GitHub</p><br><br>
+  <p class="section-subtitle">Meus laboratórios práticos publicados no GitHub</p><br><br>
   <div class="projects-grid">
 
-    <!-- CARD 1 -->
+    <!-- 1º PROJETO (FEATURED): FinOps Hands-On -->
+    <div class="project-card" style="border-color: rgba(0, 242, 255, 0.4); box-shadow: 0 0 15px rgba(0, 242, 255, 0.08);">
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" height="50px" alt="AWS"></span>
+      <p class="project-category">Featured Project · FinOps · Shift-Left</p>
+      <p class="project-name">FinOps Hands-On — AWS Costs + CO2e in Every PR</p>
+      <p class="project-desc">Este projeto demonstra a implementação de uma cultura Shift-Left FinOps, automatizando a visibilidade de custos e impacto ambiental diretamente no fluxo de Pull Request. Utilizando Terraform e Infracost, o pipeline fornece feedbacks financeiros e de sustentabilidade antes mesmo do deploy.</p>
+      <div class="project-tags">
+        <span class="project-tag">FinOps</span>
+        <span class="project-tag">Terraform</span>
+        <span class="project-tag">Infracost</span>
+        <span class="project-tag">AWS OIDC</span>
+        <span class="project-tag">GitHub Actions</span>
+      </div>
+      <p class="project-highlight"><span>Destaque Técnico:</span> Autenticação segura via AWS OIDC (Workload Identity Federation), eliminando chaves estáticas.</p>
+      <p class="project-highlight"><span>Foco:</span> Otimização de custos, governança e automação de infraestrutura escalável.</p>
+      <a href="https://github.com/JessicaApBueno/infracost_aws" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
+    </div>
+
+    <!-- 2º PROJETO: EC2 Cloud Engineering Lab -->
     <div class="project-card">
-      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=kEkT1u7zTDk5&format=png&color=000000" height="50px"></span>
-      <p class="project-category">Infraestrutura como Código · LocalStack</p>
-      <p class="project-name">EC2 Cloud Engineering Lab</p>
-      <p class="project-desc">Eliminação de hardcoding e modularização avançada no Terraform. Provisionamento de servidor web em ambiente AWS simulado com LocalStack — flexibilidade e segurança sem custo de infra.</p>
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=kEkT1u7zTDk5&format=png&color=000000" height="50px" alt="Terraform"></span>
+      <p class="project-category">Infraestrutura como Código &amp; LocalStack</p>
+      <p class="project-name">EC2 Cloud Engineering Lab - Terraform Variables</p>
+      <p class="project-desc">Foco na eliminação de hardcoding e modularização avançada. Provisionamento de servidor web em ambiente AWS simulado (LocalStack) com foco em flexibilidade e segurança.</p>
       <div class="project-tags">
         <span class="project-tag">Terraform</span>
         <span class="project-tag">LocalStack</span>
@@ -65,28 +86,28 @@
         <span class="project-tag">EC2/VPC</span>
       </div>
       <p class="project-highlight"><span>Destaque:</span> Arquitetura desacoplada e esteira CI/CD com custo zero.</p>
-      <a href="https://github.com/JessicaApBueno/projeto-ec2-localstack" target="_blank" class="project-link">Ver no GitHub →</a>
+      <a href="https://github.com/JessicaApBueno/projeto-ec2-localstack" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
     </div>
 
-    <!-- CARD 2 -->
+    <!-- 3º PROJETO: S3 DevSecOps Lab -->
     <div class="project-card">
-      <span class="project-emoji"><img src="./assets/devsecops.png" height="50px"></span>
-      <p class="project-category">DevSecOps · Cloud Security</p>
-      <p class="project-name">S3 DevSecOps Lab</p>
-      <p class="project-desc">Esteira DevSecOps com 3 estágios: Lint, Security Scan e Plan. Validação de segurança com tfsec antes de qualquer apply, garantindo conformidade automatizada.</p>
+      <span class="project-emoji"><img src="./assets/devsecops.png" height="50px" alt="DevSecOps"></span>
+      <p class="project-category">DevSecOps &amp; Cloud Security</p>
+      <p class="project-name">S3 DevSecOps Lab - Terraform &amp; LocalStack</p>
+      <p class="project-desc">Implementação de esteira DevSecOps com 3 estágios (Lint, Security Scan e Plan). Validação automatizada de segurança com tfsec antes de qualquer apply.</p>
       <div class="project-tags">
         <span class="project-tag">Terraform</span>
         <span class="project-tag">LocalStack</span>
         <span class="project-tag">GitHub Actions</span>
         <span class="project-tag">tfsec</span>
       </div>
-      <p class="project-highlight"><span>Destaque:</span> Criptografia AES256 e bloqueio de acesso público via módulos reutilizáveis.</p>
-      <a href="https://github.com/JessicaApBueno/localstack-terraform-lab" target="_blank" class="project-link">Ver no GitHub →</a>
+      <p class="project-highlight"><span>Destaque:</span> Aplicação automática de criptografia AES256 e bloqueio de acesso público via módulos reutilizáveis.</p>
+      <a href="https://github.com/JessicaApBueno/localstack-terraform-lab" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
     </div>
 
-    <!-- CARD 3 -->
+    <!-- CARD 4: Baleia GitOps -->
     <div class="project-card">
-      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=cvzmaEA4kC0o&format=png&color=000000" height="50px"></span>
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=cvzmaEA4kC0o&format=png&color=000000" height="50px" alt="Kubernetes"></span>
       <p class="project-category">CI/CD · Kubernetes · GitOps</p>
       <p class="project-name">Baleia GitOps</p>
       <p class="project-desc">Pipeline de CI nativo de container em cluster Kubernetes local (Kind). Build seguro sem Docker-in-Docker, versionamento dinâmico de imagens Go e push para Docker Hub.</p>
@@ -97,12 +118,12 @@
         <span class="project-tag">Docker Hub</span>
       </div>
       <p class="project-highlight"><span>Destaque:</span> Build seguro (sem Docker-in-Docker) e versionamento dinâmico de imagens Go.</p>
-      <a href="https://github.com/JessicaApBueno/baleia-gitops" target="_blank" class="project-link">Ver no GitHub →</a>
+      <a href="https://github.com/JessicaApBueno/baleia-gitops" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
     </div>
 
-    <!-- CARD 4 -->
+    <!-- CARD 5: GCP + Ansible -->
     <div class="project-card">
-      <span class="project-emoji"> <img src="https://img.icons8.com/?size=100&id=WHRLQdbEXQ16&format=png&color=000000" height="50px"></span>
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=WHRLQdbEXQ16&format=png&color=000000" height="50px" alt="Google Cloud"></span>
       <p class="project-category">Multi-Cloud · Configuration Management</p>
       <p class="project-name">Deploy de Site Estático · GCP + Ansible</p>
       <p class="project-desc">Fluxo completo de IaC para provisionar recursos no Google Cloud e gerenciar configuração automaticamente via Ansible. Do zero ao servidor web funcional em um pipeline.</p>
@@ -112,12 +133,12 @@
         <span class="project-tag">Ansible</span>
       </div>
       <p class="project-highlight"><span>Destaque:</span> Integração entre provisionamento (Terraform) e configuração de software (Ansible).</p>
-      <a href="https://github.com/JessicaApBueno/IACcomTerraformAndGCP" target="_blank" class="project-link">Ver no GitHub →</a>
+      <a href="https://github.com/JessicaApBueno/IACcomTerraformAndGCP" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
     </div>
 
-    <!-- CARD 5 — NOVO -->
+    <!-- CARD 6: AWS Observability -->
     <div class="project-card">
-      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" height="50px"></span>
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=33039&format=png&color=000000" height="50px" alt="AWS"></span>
       <p class="project-category">Observabilidade · AWS · Monitoramento</p>
       <p class="project-name">AWS CloudWatch &amp; CloudTrail Lab</p>
       <p class="project-desc">Laboratório de observabilidade e auditoria na AWS. Provisionamento de instâncias EC2 com alarmes de CPU via CloudWatch e logs de auditoria criptografados com CloudTrail — tudo como código com Terraform.</p>
@@ -129,12 +150,12 @@
         <span class="project-tag">AWS</span>
       </div>
       <p class="project-highlight"><span>Destaque:</span> Observabilidade completa com alertas proativos e trilha de auditoria criptografada.</p>
-      <a href="https://github.com/JessicaApBueno/aws-cloudwatch-cloudtrail-lab" target="_blank" class="project-link">Ver no GitHub →</a>
+      <a href="https://github.com/JessicaApBueno/aws-cloudwatch-cloudtrail-lab" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
     </div>
 
-    <!-- CARD 6 — NOVO -->
+    <!-- CARD 7: CSV -> JSON -->
     <div class="project-card">
-      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" height="50px"></span>
+      <span class="project-emoji"><img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" height="50px" alt="Python"></span>
       <p class="project-category">Serverless · Python · AWS Lambda</p>
       <p class="project-name">Processador Automático CSV → JSON</p>
       <p class="project-desc">Pipeline serverless orientado a eventos na AWS. Um upload de arquivo CSV no S3 dispara automaticamente uma função Lambda que converte, valida e salva o resultado em JSON em outro bucket — sem servidor, sem custo idle.</p>
@@ -146,13 +167,13 @@
         <span class="project-tag">Event-Driven</span>
       </div>
       <p class="project-highlight"><span>Destaque:</span> Arquitetura event-driven — do upload ao JSON processado sem nenhuma intervenção manual.</p>
-      <a href="https://github.com/JessicaApBueno/Processador-Autom-tico-de-CSV-para-JSON-AWS-Lambda-S3-" target="_blank" class="project-link">Ver no GitHub →</a>
+      <a href="https://github.com/JessicaApBueno/Processador-Autom-tico-de-CSV-para-JSON-AWS-Lambda-S3-" target="_blank" rel="noopener noreferrer" class="project-link">Ver no GitHub →</a>
     </div>
 
   </div>
 
   <div style="text-align:center; margin-top:2.5rem;">
-    <a href="https://github.com/JessicaApBueno" target="_blank" class="btn-outline">Ver todos os repositórios →</a>
+    <a href="https://github.com/JessicaApBueno" target="_blank" rel="noopener noreferrer" class="btn-outline">Ver todos os repositórios →</a>
   </div>
 </div>
 
@@ -164,7 +185,7 @@
     <span>Vah MaNa</span>
   </div>
   <p>O elo entre o legado e a inovação &hearts; Jessica Bueno </p>
-   <span>© 2026</span>
+  <span>© 2026</span>
 </footer>
 
 <script src="script.js"></script>
